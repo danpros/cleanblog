@@ -16,49 +16,49 @@ You can use custom header background let say for frontpage, category page, profi
 You just need to add new custom value in your config page. 
 
 **Home**
-`
+```
 cleanblog.homebg = "https://www.example.com/your.homebg.png"
-`
+```
 
 **Category**
-`
+```
 cleanblog.categorybg = "https://www.example.com/your.categorybg.png"
-`
+```
 
 **Tag**
-`
+```
 cleanblog.tagbg = "https://www.example.com/your.tagbg.png"
-`
+```
 
 **Page and Subpage**
-`
+```
 cleanblog.pagebg = "https://www.example.com/your.pagebg.png"
-`
+```
 
 **Profile**
-`
+```
 cleanblog.profilebg = "https://www.example.com/your.profilebg.png"
-`
+```
 
 **Archive**
-`
+```
 cleanblog.archivebg = "https://www.example.com/your.archivebg.png"
-`
+```
 
 **Search**
-`
+```
 cleanblog.searchbg = "https://www.example.com/your.searchbg.png"
-`
+```
 
 **Error 404**
-`
+```
 cleanblog.404bg = "https://www.example.com/your.404bg.png"
-`
+```
 
 **Blog**
-`
+```
 cleanblog.blogbg = "https://www.example.com/your.blogbg.png"
-`
+```
 
 **Post**
 
