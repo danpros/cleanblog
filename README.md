@@ -1,6 +1,6 @@
 # HTMLy Clean Blog
 
-Clean Blog ported to HTMLy.
+Clean Blog Free Bootstrap Theme ported to HTMLy.
 
 [Clean Blog](http://startbootstrap.com/template-overviews/clean-blog/) is a stylish, responsive blog theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/).
 

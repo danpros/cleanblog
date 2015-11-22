@@ -257,5 +257,6 @@
     <script src="<?php echo site_url();?>themes/cleanblog/js/bootstrap.min.js"></script>
     <!-- Custom Theme JavaScript -->
     <script src="<?php echo site_url();?>themes/cleanblog/js/clean-blog.js"></script>
+    <?php if (analytics()): ?><?php echo analytics() ?><?php endif; ?>
 </body>
 </html>
