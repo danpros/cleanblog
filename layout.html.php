@@ -144,9 +144,9 @@
                     <?php endif;?>
                     <?php if (isset($is_tag)):?>
                         <div class="site-heading">
-                            <h1><?php echo blog_title();?></h1>
+                            <h1><?php echo $tag->title;?></h1>
                             <hr class="small">
-                            <span class="subheading"><?php echo blog_tagline();?></span>
+                            <span class="subheading"><?php echo blog_title();?></span>
                         </div>
                         <style>
                         <?php if(config('cleanblog.tagbg') == '') {?>
@@ -158,9 +158,9 @@
                     <?php endif;?>
                     <?php if (isset($is_archive)):?>
                         <div class="site-heading">
-                            <h1><?php echo blog_title();?></h1>
+                            <h1><?php echo $archive->title;?></h1>
                             <hr class="small">
-                            <span class="subheading"><?php echo blog_tagline();?></span>
+                            <span class="subheading"><?php echo blog_title();?></span>
                         </div>
                         <style>
                         <?php if(config('cleanblog.archivebg') == '') {?>
@@ -172,9 +172,9 @@
                     <?php endif;?>
                     <?php if (isset($is_search)):?>
                         <div class="site-heading">
-                            <h1><?php echo blog_title();?></h1>
+                            <h1><?php echo $search->title;?></h1>
                             <hr class="small">
-                            <span class="subheading"><?php echo blog_tagline();?></span>
+                            <span class="subheading"><?php echo blog_title();?></span>
                         </div>
                         <style>
                         <?php if(config('cleanblog.searchbg') == '') {?>
@@ -184,7 +184,7 @@
                         <?php } ?>
                         </style>
                     <?php endif;?>
-                    <?php if (isset($is_notfound)):?>
+                    <?php if (isset($is_404) || isset($is_404search)):?>
                         <div class="site-heading">
                             <h1>Error 404!</h1>
                             <hr class="small">
