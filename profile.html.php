@@ -26,6 +26,7 @@
                 <?php } else {
                     echo 'No posts found!';
                 } ?>
+                <?php if (!empty($posts)) { ?>
                 <?php if (!empty($pagination['prev']) || !empty($pagination['next'])): ?>
                 <hr>
                 <!-- Pager -->
@@ -42,6 +43,7 @@
                     <?php endif;?>
                 </ul>
                 <?php endif; ?>
+                <?php } ?>
             </div>
         </div>
     </div>
