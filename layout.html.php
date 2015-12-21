@@ -47,7 +47,7 @@
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <?php echo menu('navbar-right') ?>
+                <?php echo menu('navbar-nav navbar-right') ?>
             </div>
             <!-- /.navbar-collapse -->
         </div>
