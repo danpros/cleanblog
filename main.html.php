@@ -20,7 +20,7 @@
                     </h2>
                 </a>
                 <p class="post-meta">Posted in <?php echo $p->category; ?> by <a href="<?php echo $p->authorUrl; ?>"><?php echo $p->author; ?></a> on <?php echo date('F d, Y', $p->date) ?></p>
-                <p><?php echo get_teaser($p->body) ?></p>
+                <?php echo get_teaser($p->body, $p->url); ?>
             </div>
             <hr>
             <?php endforeach; ?>
