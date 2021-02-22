@@ -76,7 +76,7 @@
                     <?php if (isset($is_post)):?>
                         <div class="post-heading">
                             <h1><?php echo $p->title;?></h1>
-                            <span class="meta">Posted in <?php echo $p->category;?> by <a href="<?php echo $p->authorUrl;?>"><?php echo $p->author;?></a> on <?php echo date('d F Y', $p->date);?></span>
+                            <span class="meta">Posted in <?php echo $p->category;?> by <a href="<?php echo $p->authorUrl;?>"><?php echo $p->author;?></a> on <?php echo format_date($p->date); ?></span>
                         </div>
                         <style>
                         <?php if(empty($p->image)) {?>
