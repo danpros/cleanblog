@@ -7,7 +7,7 @@ Clean Blog Free Bootstrap Theme ported to HTMLy.
 ## Installations 
  -  Upload and extract the zip file into themes directory.
  -  Rename the extracted folder to `cleanblog`.
- -  Change the `views.root` using `http://www.example.com/admin/config` to `themes/cleanblog`
+ -  Activate it from HTMLy panel.
  
 ## Custom Background
 
