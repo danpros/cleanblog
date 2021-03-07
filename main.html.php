@@ -1,3 +1,4 @@
+<?php if (!defined('HTMLY')) die('HTMLy'); ?>
 <!-- Main Content -->
 <div class="container">
     <div class="row">

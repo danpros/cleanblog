@@ -1,3 +1,4 @@
+<?php if (!defined('HTMLY')) die('HTMLy'); ?>
 <!-- Post Content -->
 <article>
     <div class="container">
