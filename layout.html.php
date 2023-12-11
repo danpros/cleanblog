@@ -1,6 +1,6 @@
 <?php if (!defined('HTMLY')) die('HTMLy'); ?>
 <!DOCTYPE html>
-<html lang="<?php echo str_replace('_', '-', config('language'));?>">
+<html lang="<?php echo blog_language();?>">
 <head>
     <?php echo head_contents();?>
     <title><?php echo $title;?></title>
@@ -9,9 +9,9 @@
     <?php if (publisher()): ?>
     <link href="<?php echo publisher() ?>" rel="publisher" /><?php endif; ?> 
     <!-- Bootstrap Core CSS -->
-    <link href="<?php echo site_url();?>themes/cleanblog/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo theme_path();?>css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
-    <link href="<?php echo site_url();?>themes/cleanblog/css/clean-blog.css" rel="stylesheet">
+    <link href="<?php echo theme_path();?>css/clean-blog.css" rel="stylesheet">
     <!-- Custom Fonts -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
@@ -23,13 +23,6 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<?php     
-    if (isset($_GET['search'])) {
-        $search = $_GET['search'];
-        $url = site_url() . 'search/' . remove_accent($search);
-        header("Location: $url");
-    }
-?>
 <body>
 <?php if (facebook()) { echo facebook(); } ?>
 <?php if (login()) { toolbar(); } ?>
@@ -68,7 +61,7 @@
                         </div>
                         <style>
                         <?php if(config('cleanblog.homebg') == '') {?>
-                            .intro-header {background-image: url('<?php echo site_url();?>themes/cleanblog/img/home-bg.jpg')}
+                            .intro-header {background-image: url('<?php echo theme_path();?>img/home-bg.jpg')}
                         <?php } else { ?>
                             .intro-header {background-image: url('<?php echo config('cleanblog.homebg');?>')}
                         <?php } ?>
@@ -81,7 +74,7 @@
                         </div>
                         <style>
                         <?php if(empty($p->image)) {?>
-                            .intro-header {background-image: url('<?php echo site_url();?>themes/cleanblog/img/post-bg.jpg')}
+                            .intro-header {background-image: url('<?php echo theme_path();?>img/post-bg.jpg')}
                         <?php } else { ?>
                             .intro-header {background-image: url('<?php echo $p->image;?>')}
                         <?php } ?>
@@ -95,7 +88,7 @@
                         </div>
                         <style>
                         <?php if(config('cleanblog.pagebg') == '') {?>
-                            .intro-header {background-image: url('<?php echo site_url();?>themes/cleanblog/img/home-bg.jpg')}
+                            .intro-header {background-image: url('<?php echo theme_path();?>img/home-bg.jpg')}
                         <?php } else { ?>
                             .intro-header {background-image: url('<?php echo config('cleanblog.pagebg');?>')}
                         <?php } ?>
@@ -109,7 +102,7 @@
                         </div>
                         <style>
                         <?php if(config('cleanblog.profilebg') == '') {?>
-                            .intro-header {background-image: url('<?php echo site_url();?>themes/cleanblog/img/about-bg.jpg')}
+                            .intro-header {background-image: url('<?php echo theme_path();?>img/about-bg.jpg')}
                         <?php } else { ?>
                             .intro-header {background-image: url('<?php echo config('cleanblog.profilebg');?>')}
                         <?php } ?>
@@ -123,7 +116,7 @@
                         </div>
                         <style>
                         <?php if(config('cleanblog.blogbg') == '') {?>
-                            .intro-header {background-image: url('<?php echo site_url();?>themes/cleanblog/img/post-bg.jpg')}
+                            .intro-header {background-image: url('<?php echo theme_path();?>img/post-bg.jpg')}
                         <?php } else { ?>
                             .intro-header {background-image: url('<?php echo config('cleanblog.blogbg');?>')}
                         <?php } ?>
@@ -137,7 +130,7 @@
                         </div>
                         <style>
                         <?php if(config('cleanblog.categorybg') == '') {?>
-                            .intro-header {background-image: url('<?php echo site_url();?>themes/cleanblog/img/home-bg.jpg')}
+                            .intro-header {background-image: url('<?php echo theme_path();?>img/home-bg.jpg')}
                         <?php } else { ?>
                             .intro-header {background-image: url('<?php echo config('cleanblog.categorybg');?>')}
                         <?php } ?>
@@ -151,7 +144,7 @@
                         </div>
                         <style>
                         <?php if(config('cleanblog.tagbg') == '') {?>
-                            .intro-header {background-image: url('<?php echo site_url();?>themes/cleanblog/img/home-bg.jpg')}
+                            .intro-header {background-image: url('<?php echo theme_path();?>img/home-bg.jpg')}
                         <?php } else { ?>
                             .intro-header {background-image: url('<?php echo config('cleanblog.tagbg');?>')}
                         <?php } ?>
@@ -165,7 +158,7 @@
                         </div>
                         <style>
                         <?php if(config('cleanblog.archivebg') == '') {?>
-                            .intro-header {background-image: url('<?php echo site_url();?>themes/cleanblog/img/home-bg.jpg')}
+                            .intro-header {background-image: url('<?php echo theme_path();?>img/home-bg.jpg')}
                         <?php } else { ?>
                             .intro-header {background-image: url('<?php echo config('cleanblog.archivebg');?>')}
                         <?php } ?>
@@ -179,7 +172,7 @@
                         </div>
                         <style>
                         <?php if(config('cleanblog.searchbg') == '') {?>
-                            .intro-header {background-image: url('<?php echo site_url();?>themes/cleanblog/img/home-bg.jpg')}
+                            .intro-header {background-image: url('<?php echo theme_path();?>img/home-bg.jpg')}
                         <?php } else { ?>
                             .intro-header {background-image: url('<?php echo config('cleanblog.searchbg');?>')}
                         <?php } ?>
@@ -193,7 +186,7 @@
                         </div>
                         <style>
                         <?php if(config('cleanblog.404bg') == '') {?>
-                            .intro-header {background-image: url('<?php echo site_url();?>themes/cleanblog/img/home-bg.jpg')}
+                            .intro-header {background-image: url('<?php echo theme_path();?>img/home-bg.jpg')}
                         <?php } else { ?>
                             .intro-header {background-image: url('<?php echo config('cleanblog.404bg');?>')}
                         <?php } ?>
@@ -253,11 +246,11 @@
         </div>
     </footer>
     <!-- jQuery -->
-    <script src="<?php echo site_url();?>themes/cleanblog/js/jquery.min.js"></script>
+    <script src="<?php echo theme_path();?>js/jquery.min.js"></script>
     <!-- Bootstrap Core JavaScript -->
-    <script src="<?php echo site_url();?>themes/cleanblog/js/bootstrap.min.js"></script>
+    <script src="<?php echo theme_path();?>js/bootstrap.min.js"></script>
     <!-- Custom Theme JavaScript -->
-    <script src="<?php echo site_url();?>themes/cleanblog/js/clean-blog.js"></script>
+    <script src="<?php echo theme_path();?>js/clean-blog.js"></script>
     <?php if (analytics()): ?><?php echo analytics() ?><?php endif; ?>
 </body>
 </html>
