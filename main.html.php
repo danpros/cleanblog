@@ -20,7 +20,7 @@
                         <?php echo $p->title; ?>
                     </h2>
                 </a>
-                <p class="post-meta">Posted in <?php echo $p->category; ?> by <a href="<?php echo $p->authorUrl; ?>"><?php echo $p->authorName; ?></a> on <?php echo format_date($p->date); ?></p>
+                <p class="post-meta"><?php echo i18n('Posted_in');?> <?php echo $p->category; ?> <?php echo i18n('by');?> <a href="<?php echo $p->authorUrl; ?>"><?php echo $p->authorName; ?></a> - <?php echo format_date($p->date); ?></p>
                 <?php echo get_teaser($p->body, $p->url); ?>
             </div>
             <hr>
@@ -30,12 +30,12 @@
             <ul class="pager">
                 <?php if (!empty($pagination['prev'])): ?>
                 <li class="prev pull-left">
-                    <a class="prev page-numbers" href="?page=<?php echo $page - 1 ?>" rel="prev">&larr; Newer Posts</a>
+                    <a class="prev page-numbers" href="?page=<?php echo $page - 1 ?>" rel="prev">&larr; <?php echo i18n('Newer');?></a>
                 </li>
                 <?php endif;?>
                 <?php if (!empty($pagination['next'])): ?>
                 <li class="next pull-right">
-                    <a class="next page-numbers" href="?page=<?php echo $page + 1 ?>" rel="next">Older Posts &rarr;</a>
+                    <a class="next page-numbers" href="?page=<?php echo $page + 1 ?>" rel="next"><?php echo i18n('Older');?> &rarr;</a>
                 </li>
                 <?php endif;?>
             </ul>

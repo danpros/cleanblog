@@ -31,8 +31,7 @@
                     <span class="tags"><i class="fa fa-tags"></i> <?php echo $p->tag;?></span> 
                     <span class="share pull-right">
                         <a target="_blank" class="first" href="https://www.facebook.com/sharer.php?u=<?php echo $p->url ?>&t=<?php echo $p->title ?>"><i class="fa fa-facebook"></i></a> 
-                        <a target="_blank" href="https://twitter.com/share?url=<?php echo $p->url ?>&text=<?php echo $p->title ?>"><i class="fa fa-twitter"></i></a> 
-                        <a target="_blank" class="last" href="https://plus.google.com/share?url=<?php echo $p->url ?>"><i class="fa fa-google-plus"></i></a> 
+                        <a target="_blank" href="https://twitter.com/share?url=<?php echo $p->url ?>&text=<?php echo $p->title ?>"><i class="fa fa-twitter"></i></a>
                     </span>
                 </div>
                 <?php if (disqus()): ?>
@@ -47,12 +46,12 @@
                 <ul class="pager">
                     <?php if (!empty($next)): ?>
                     <li class="next pull-left">
-                        <a href="<?php echo($next['url']); ?>" rel="next">&larr; Newer</a>
+                        <a href="<?php echo($next['url']); ?>" rel="next">&larr; <?php echo i18n('Next_post');?></a>
                     </li>
                     <?php endif;?>
                     <?php if (!empty($prev)): ?>
                     <li class="prev pull-right">
-                        <a href="<?php echo($prev['url']); ?>" rel="prev">Older &rarr;</a>
+                        <a href="<?php echo($prev['url']); ?>" rel="prev"><?php echo i18n('Prev_post');?> &rarr;</a>
                     </li>
                     <?php endif;?>
                 </ul>

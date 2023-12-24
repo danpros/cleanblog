@@ -6,8 +6,6 @@
     <title><?php echo $title;?></title>
     <meta name="description" content="<?php echo $description; ?>"/>
     <link rel="canonical" href="<?php echo $canonical; ?>" />
-    <?php if (publisher()): ?>
-    <link href="<?php echo publisher() ?>" rel="publisher" /><?php endif; ?> 
     <!-- Bootstrap Core CSS -->
     <link href="<?php echo theme_path();?>css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
@@ -70,7 +68,7 @@
                     <?php if (isset($is_post)):?>
                         <div class="post-heading">
                             <h1><?php echo $p->title;?></h1>
-                            <span class="meta">Posted in <?php echo $p->category;?> by <a href="<?php echo $p->authorUrl;?>"><?php echo $p->authorName;?></a> on <?php echo format_date($p->date); ?></span>
+                            <span class="meta"><?php echo i18n('Posted_in');?> <?php echo $p->category;?> <?php echo i18n('by');?> <a href="<?php echo $p->authorUrl;?>"><?php echo $p->authorName;?></a> - <?php echo format_date($p->date); ?></span>
                         </div>
                         <style>
                         <?php if(empty($p->image)) {?>
@@ -207,6 +205,7 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <ul class="list-inline text-center">
+					<?php if(!empty(config('social.twitter'))):?>
                         <li>
                             <a href="<?php echo config('social.twitter');?>">
                                 <span class="fa-stack fa-lg">
@@ -215,6 +214,8 @@
                                 </span>
                             </a>
                         </li>
+					<?php endif;?>
+					<?php if(!empty(config('social.facebook'))):?>
                         <li>
                             <a href="<?php echo config('social.facebook');?>">
                                 <span class="fa-stack fa-lg">
@@ -223,14 +224,7 @@
                                 </span>
                             </a>
                         </li>
-                        <li>
-                            <a href="<?php echo config('social.google');?>">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
+					<?php endif;?>
                         <li>
                             <a href="<?php echo site_url();?>feed/rss">
                                 <span class="fa-stack fa-lg">

@@ -5,13 +5,13 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <?php echo $about; ?>
-                <h3>Posts by this author</h3>
+                <h3><?php echo i18n('Post_by_author');?></h3>
                 <?php if (!empty($posts)) { ?>
                     <ul class="post-list">
                         <?php foreach ($posts as $p): ?>
                             <li class="item">
-                                <span><a href="<?php echo $p->url ?>"><?php echo $p->title ?></a></span> on
-                                <span><?php echo format_date($p->date); ?></span> - Posted in <span><?php echo $p->category ?></span>
+                                <span><a href="<?php echo $p->url ?>"><?php echo $p->title ?></a></span> -
+                                <span><?php echo format_date($p->date); ?></span> - <?php echo i18n('Posted_in');?> <span><?php echo $p->category ?></span>
                             </li>
                         <?php endforeach; ?>
                     </ul>
@@ -25,12 +25,12 @@
                 <ul class="pager">
                     <?php if (!empty($pagination['prev'])): ?>
                     <li class="prev pull-left">
-                        <a class="prev page-numbers" href="?page=<?php echo $page - 1 ?>" rel="prev">&larr; Newer Posts</a>
+                        <a class="prev page-numbers" href="?page=<?php echo $page - 1 ?>" rel="prev">&larr; <?php echo i18n('Newer');?></a>
                     </li>
                     <?php endif;?>
                     <?php if (!empty($pagination['next'])): ?>
                     <li class="next pull-right">
-                        <a class="next page-numbers" href="?page=<?php echo $page + 1 ?>" rel="next">Older Posts &rarr;</a>
+                        <a class="next page-numbers" href="?page=<?php echo $page + 1 ?>" rel="next"><?php echo i18n('Older');?> &rarr;</a>
                     </li>
                     <?php endif;?>
                 </ul>
