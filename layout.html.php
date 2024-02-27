@@ -204,36 +204,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <ul class="list-inline text-center">
-					<?php if(!empty(config('social.twitter'))):?>
-                        <li>
-                            <a href="<?php echo config('social.twitter');?>">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-					<?php endif;?>
-					<?php if(!empty(config('social.facebook'))):?>
-                        <li>
-                            <a href="<?php echo config('social.facebook');?>">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-					<?php endif;?>
-                        <li>
-                            <a href="<?php echo site_url();?>feed/rss">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                    </ul>
+                    <?php echo social('text-center');?>
                     <div class="copyright text-muted"><?php echo copyright();?></div>
                 </div>
             </div>
