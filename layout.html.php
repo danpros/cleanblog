@@ -6,6 +6,7 @@
     <title><?php echo $title;?></title>
     <meta name="description" content="<?php echo $description; ?>"/>
     <link rel="canonical" href="<?php echo $canonical; ?>" />
+    <?php echo $metatags;?>
     <!-- Bootstrap Core CSS -->
     <link href="<?php echo theme_path();?>css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
