@@ -487,3 +487,10 @@ blockquote.category {
   border:none;
   padding:0;
 }
+
+.social-logo a {
+  margin-right: 10px!important;
+}
+.social-logo a:last-child {
+  margin-right:0!important;
+}

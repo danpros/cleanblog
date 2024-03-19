@@ -26,6 +26,11 @@
                     </div>
                 <?php } ?>
                 <?php echo $p->body; ?>
+	            <div class="related-posts toolbox">
+                <style>.related-posts ul {margin-top:10px;}.related-posts a {text-decoration:underline}</style>
+                    <strong><?php echo i18n("related_posts");?></strong>
+	                <?php echo get_related($p->related);?>
+                </div>
                 <div class="toolbox">
                     <span class="category"><i class="fa fa-folder"></i> <?php echo $p->category;?></span> 
                     <span class="tags"><i class="fa fa-tags"></i> <?php echo $p->tag;?></span> 
@@ -45,12 +50,12 @@
                 <!-- Pager -->
                 <ul class="pager">
                     <?php if (!empty($next)): ?>
-                    <li class="next pull-left">
+                    <li class="next pull-left" style="margin-bottom:5px;">
                         <a href="<?php echo($next['url']); ?>" rel="next">&larr; <?php echo i18n('Next_post');?></a>
                     </li>
                     <?php endif;?>
                     <?php if (!empty($prev)): ?>
-                    <li class="prev pull-right">
+                    <li class="prev pull-right" style="margin-bottom:5px;">
                         <a href="<?php echo($prev['url']); ?>" rel="prev"><?php echo i18n('Prev_post');?> &rarr;</a>
                     </li>
                     <?php endif;?>
